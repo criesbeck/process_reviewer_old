@@ -1,0 +1,56 @@
+{
+  "title": "Process Inventory",
+  "processes": {
+    "meetings": {
+      "number per week": "float",
+      "median length (in hours)": "float",
+      "when scheduled": "eg:fixed schedule, end of previous meeting, on demand",
+      "meeting activities": "eg:coding, task planning, scheduling, client interaction, retrospective, classwork"
+    },
+    "communication": {
+      "channel": "eg: text, group.me, slack, messenger, email",
+      "number of weekly messages": "float",
+      "content": "eg: meeting requests, meeting notes, help request, code updates"
+    },
+    "ideation": {
+      "when": "eg:meetings only, ad hoc",
+      "how": "eg:sequential discussion, parallel note-making",
+      "resolution process": "eg: consensus, voting, leader choice, loudest wins"
+    },
+    "coding": {
+      "% weekly time soloing": "float",
+      "% weekly time pairing": "float",
+      "% weekly time swarming": "float",
+      "pairing policy": "eg:familiarity, unfamiliarity, expert-novice",
+      "review": "eg: none, pull requests, team review",
+      "test policy": "eg:none, as needed, manual, automated, TDD, CI server",
+      "test methods": "eg: unit, web based, simulator-based, device-based"
+    },
+    "tasking": {
+      "task selection policy": "eg: code familiarity, code unfamiliarity, skilled, unskilled",
+      "when assigned": "eg: during planning (push), during execution (pull)",
+      "assignment policy": "eg:maximize speed, maximize learning",
+      "tracking": "eg: spreadsheet, trello, github project, jira, notion",
+      "work unit": "eg: feature, coding task, user story"
+    },
+    "git": {
+      "branch types": "eg:none, per developer, per feature, master, development",
+      "branch management": "eg: delete on completion, limit duration",
+      "commit messages": "eg: informal, structured, tagged",
+      "features used": "eg: issues, versions, project board, pull requests"
+    }    
+  },
+  "practices": {
+    "positive": {
+      "state": "eg: using, starting",
+      "reasons": "eg: habit, familiar, low effort, good for",
+      "stance": "eg: OK for now, great, needs changing"
+    },
+    "negative": {
+      "state": "eg: stopped, stopping, untried",
+      "reasons": "eg: habit, high effort, schedule conflicts, not needed, learning curve, bad for",
+      "stance": "eg: maybe someday, never"
+    }
+  }, 
+  "metrics": "eg: velocity, value, product quality, team morale, client happiness"
+}

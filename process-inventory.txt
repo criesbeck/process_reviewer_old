@@ -1,0 +1,67 @@
+PROCESS INVENTORY
+
+meetings
+how distributed, how many, how long, total time
+when scheduled: fixed schedule, end of previous meeting, on demand
+% activities: coding, task planning, scheduling, client interaction, retrospective, classwork
+
+coding
+% work done solo, pair, swarm
+testing: ad hoc, manual scripts, automated, tdd, ci
+tests: unit, web page, simulator, device(s)
+code review: none, pull requests, team review
+practice: one of [ list of practices ]
+status: one of [using, starting] 
+        or [stopped, stopping, not trying]
+reason: one or more of [habit, familiar low effort, good-for: one or more of [ list of metrics ]]
+        or [habit, high effort, not needed, learning curve, bad-for: one or more of [ list of metrics ]]
+data:
+
+
+
+git
+branch types: none, per-dev, per-feature, master vs dev 
+branch policy: time-limited, deletion
+commit granularity: by change, by story
+commit messaging
+git issues? git tags? versions?
+pull requests?
+
+tasking
+assignment: push vs pull, in meetings vs on demand
+selection by skill or familiarity, or by lack thereof
+pairing policy
+
+task management
+user stories vs coding tasks
+backlog tooling: spreadsheet, trello, github project, jira, notion, ...
+
+communication
+text, group.me, slack, messenger, email, ...
+
+brainstorming
+meetings only, ad hoc, oral and sequential, notes in parallel, whiteboarding
+
+decision making
+consensus, voting, passion, 
+
+RATIONALE
+
+for each process element, why not other options
+
+obstacles: 
+not enough time
+schedule conflicts
+no need
+too much work
+learning curve
+
+concerns:
+bad for morale
+bad for velocity
+bad for code quality
+bad for value
+
+CONCERNS AND COMPLACENCIES
+how does each team member feel about each process element:
+OK for now, great, needs changing

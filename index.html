@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Process Reviewer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <h1>Process Reviewer</h1>
+
+    <div id="app" class="container d-flex flex-row flex-wrap">
+        <div id="app" class="container d-flex flex-row flex-wrap list-group">
+            <div class="m-2 p-2 list-group-item process-area"
+                v-for="(process, processKey) in processes" 
+                v-bind:key="processKey">
+                <h2>{{processKey}}</h2>
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item"
+                        v-for="(practice, practiceKey) in process"
+                        v-bind:key="practiceKey">
+                        {{practiceKey}}
+                        <select class="list-group" multiple 
+                            v-bind:size="Math.min(3, Object.keys(practice.options).length)">
+                            <option class="list-group-item list-group-item-action"
+                                v-for="(option, optionKey) in practice.options"
+                                v-bind:key="optionKey"
+                                v-bind:data-process="processKey"
+                                v-bind:data-practice="practiceKey"
+                                v-bind:data-option="optionKey">
+                                {{optionKey}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://unpkg.com/vue"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
