@@ -40,17 +40,15 @@
       "features used": "eg: issues, versions, project board, pull requests"
     }    
   },
-  "practices": {
+  "views": {
     "positive": {
-      "state": "eg: using, starting",
-      "reasons": "eg: habit, familiar, low effort, good for",
-      "stance": "eg: OK for now, great, needs changing"
+      "state": "using, trying",
+      "reasons": "habit, familiar, low effort, good for *metric"
     },
     "negative": {
-      "state": "eg: stopped, stopping, untried",
-      "reasons": "eg: habit, high effort, schedule conflicts, not needed, learning curve, bad for",
-      "stance": "eg: maybe someday, never"
+      "state": "stopped, stopping, avoiding, untried",
+      "reasons": "habit, high effort, schedule conflicts, not needed, learning curve, bad for *metric"
     }
   }, 
-  "metrics": "eg: velocity, value, product quality, team morale, client happiness"
+  "metrics": "velocity, value, product quality, team morale, client happiness"
 }

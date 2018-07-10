@@ -1,4 +1,4 @@
-.process-area { display: inline-block; width: 20em; }
+.fas { margin-left: 0.5em; }
 
 .optionField {
   height: 0;
@@ -13,3 +13,12 @@
   opacity: 1;
   transition: opacity 1s ease-in;
 }
+
+.optionValue { margin-right: 1em; }
+
+.optionValue .fas { font-size: 75%; opacity: 0; }
+
+.optionValue:hover .fas { opacity: 1; }
+
+
+.process-area { display: inline-block; width: 20em; }

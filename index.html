@@ -22,10 +22,14 @@
                     <div class="list-group-item"
                         v-for="(practice, practiceKey) in process"
                         v-bind:key="practiceKey">
-                        {{practiceKey}}: {{practice.current}}
-                        <span v-on:click="changeValue" class="fas fa-edit">
-                        </span>
-
+                        <span class="optionValue">
+                            {{practiceKey}}: 
+                            {{practice.current}}
+                            <span v-on:click="changeValue" class="fas fa-pencil-alt">
+                            </span>
+                            <span v-on:click="changeValue" class="fas fa-plus">
+                            </span>
+                           </span> 
                         <input type="text" class="optionField"
                             v-bind:list="makeOptionListId(practiceKey)"
                             v-on:change="setPracticeOption(processKey, practiceKey, $event)">

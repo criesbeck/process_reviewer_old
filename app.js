@@ -15,7 +15,7 @@ const app = new Vue({
     },
     changeValue(event) {
       const { target } = event;
-      const inputField = target.parentNode.querySelector('.optionField');
+      const inputField = target.closest('div').querySelector('.optionField');
       inputField.classList.toggle('active');
       inputField.focus();
       inputField.value = '';
