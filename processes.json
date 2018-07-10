@@ -2,36 +2,36 @@
   "title": "Process Inventory",
   "processes": {
     "meetings": {
-      "number per week": "float",
-      "median length (in hours)": "float",
+      "number per week": "0",
+      "median length (in hours)": "0",
       "when scheduled": "eg:fixed schedule, end of previous meeting, on demand",
       "meeting activities": "eg:coding, task planning, scheduling, client interaction, retrospective, classwork"
     },
     "communication": {
       "channel": "eg: text, group.me, slack, messenger, email",
-      "number of weekly messages": "float",
+      "number of weekly messages": "0",
       "content": "eg: meeting requests, meeting notes, help request, code updates"
     },
     "ideation": {
       "when": "eg:meetings only, ad hoc",
       "how": "eg:sequential discussion, parallel note-making",
-      "resolution process": "eg: consensus, voting, leader choice, loudest wins"
+      "resolution process": "eg: consensus, voting, leader choice, loudest wins",
+      "exploration": "eg: technical spike, timebox"
     },
     "coding": {
-      "% weekly time soloing": "float",
-      "% weekly time pairing": "float",
-      "% weekly time swarming": "float",
+      "% weekly time soloing": "0",
+      "% weekly time pairing": "0",
+      "% weekly time swarming": "0",
       "pairing policy": "eg:familiarity, unfamiliarity, expert-novice",
       "review": "eg: none, pull requests, team review",
       "test policy": "eg:none, as needed, manual, automated, TDD, CI server",
       "test methods": "eg: unit, web based, simulator-based, device-based"
     },
     "tasking": {
-      "task selection policy": "eg: code familiarity, code unfamiliarity, skilled, unskilled",
       "when assigned": "eg: during planning (push), during execution (pull)",
-      "assignment policy": "eg:maximize speed, maximize learning",
-      "tracking": "eg: spreadsheet, trello, github project, jira, notion",
-      "work unit": "eg: feature, coding task, user story"
+      "goal": "eg:maximize speed, maximize learning",
+      "task tracking": "eg: spreadsheet, trello, github project, jira, notion",
+      "task unit": "eg: feature, coding task, user story"
     },
     "git": {
       "branch types": "eg:none, per developer, per feature, master, development",

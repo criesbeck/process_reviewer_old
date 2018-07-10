@@ -17,22 +17,26 @@
                 v-for="(process, processKey) in processes" 
                 v-bind:key="processKey">
                 <h2>{{processKey}}</h2>
-                <div class="list-group list-group-flush">
+                <div class="list-group">
                     <div class="list-group-item"
                         v-for="(practice, practiceKey) in process"
                         v-bind:key="practiceKey">
-                        {{practiceKey}}
-                        <select class="list-group" multiple 
+                        {{practiceKey}}: 
+                        <span v-on:click="changeValue">
+                            {{practice.current}}
+                        </span>
+
+                        <input type="text" class="optionField"
+                            v-bind:list="makeOptionListId(practiceKey)"
+                            v-on:change="setPracticeOption(processKey, practiceKey, $event)">
+
+                        <datalist v-bind:id= "makeOptionListId(practiceKey)">
                             v-bind:size="Math.min(3, Object.keys(practice.options).length)">
-                            <option class="list-group-item list-group-item-action"
-                                v-for="(option, optionKey) in practice.options"
-                                v-bind:key="optionKey"
-                                v-bind:data-process="processKey"
-                                v-bind:data-practice="practiceKey"
-                                v-bind:data-option="optionKey">
+                            <option v-for="(option, optionKey) in practice.options"
+                                v-bind:key="optionKey">
                                 {{optionKey}}
                             </option>
-                        </select>
+                        </datalist>
                     </div>
                 </div>
             </div>
