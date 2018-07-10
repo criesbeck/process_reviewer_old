@@ -16,6 +16,8 @@ const app = new Vue({
     changeValue(event) {
       const { target } = event;
       const inputField = target.parentNode.querySelector('.optionField');
+      inputField.classList.toggle('active');
+      inputField.focus();
       inputField.value = '';
     },
     makeOptionFieldId(key) {
@@ -25,7 +27,9 @@ const app = new Vue({
       return `${key.replace(/ /g, '_')}-list`;
     },
     setPracticeOption(processKey, practiceKey, event) {
-      Vue.set(app.processes[processKey][practiceKey], 'current', event.target.value);
+      const { target } = event;
+      Vue.set(app.processes[processKey][practiceKey], 'current', target.value);
+      target.classList.remove('active');
     },
   },
 });
@@ -42,14 +46,14 @@ function keysToObject(keys) {
 
 function getDefaultOption(options) {
   return (options.startsWith('eg:'))
-    ? options.slice(3).split(',')[0]
+    ? options.slice(3).split(',')[0].trim()
     : options;
 }
 
 function makeOptionsList(options) {
   return (options.startsWith('eg:'))
     ? keysToObject(options.slice(3).split(',').map(str => str.trim()))
-    : keysToObject(['less', 'more']);
+    : keysToObject([]);
 }
 
 function makeProcesses(json) {

@@ -1,1 +1,15 @@
 .process-area { display: inline-block; width: 20em; }
+
+.optionField {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 1s ease-out;
+}
+
+.optionField.active {
+  border: 2px solid grey;
+  height: auto;
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
